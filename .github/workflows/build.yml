@@ -1,0 +1,28 @@
+name: Build and release Inno Setup installers for G12MDK
+on: 
+  push:
+    tags:
+      - "v*.*.*"
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile offline installer
+        run: iscc "G12MDK-Offline.iss"
+
+      - name: Compile online installer
+        run: iscc "G12MDK-Online.iss"
+
+      - name: Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            G12MDK-Offline.exe
+            G12MDK-Online.exe
