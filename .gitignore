@@ -1,4 +1,7 @@
-*.exe
-/Files/*
-*.iss
+/.vs/
+/.vscode/
+/.git/
+
 *.kra
+
+/*.exe
