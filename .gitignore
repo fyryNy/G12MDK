@@ -1,0 +1,4 @@
+*.exe
+/Files/*
+*.iss
+*.kra
