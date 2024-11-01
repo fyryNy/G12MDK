@@ -19,7 +19,7 @@ jobs:
         run: iscc "G12MDK-Online.iss"
 
       - name: Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: "ratrocket/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
