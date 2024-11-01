@@ -3,8 +3,9 @@
 ; https://7-zip.org/download.html
 Source: "Files\Utilities\7za.exe"; DestDir: "{tmp}\"; Flags: deleteafterinstall;
 
-; Copy vcredist 2010 (x86) installer to temp
-Source: "Files\Required\vcredist_x86.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: vcredist;
+; Copy Microsoft Visual C++ Redistributable AIO x86/x64 to temp
+; https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe
+Source: "Files\Required\VisualCppRedist_AIO_x86_x64.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: vcredist;
 
 ; Copy Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to temp
 Source: "Files\Required\Union_Primary_Universal.exe"; DestDir: "{tmp}\"; Attribs: hidden;  Flags: deleteafterinstall; Components: union\primary_patch;

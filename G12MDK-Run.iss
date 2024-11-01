@@ -1,6 +1,6 @@
 [Run]
-; Install vcredist 2010 (x86)
-Filename: "{tmp}\vcredist_x86.exe"; Parameters: "/passive";  Components: vcredist;
+; Install Microsoft Visual C++ Redistributable AIO x86/x64
+Filename: "{tmp}\VisualCppRedist_AIO_x86_x64.exe"; Parameters: "/y";  Components: vcredist;
 
 ; Install Union Primary Universal (playerkit + patched game executables) and Union 1.0m
 Filename: "{tmp}\Union_Primary_Universal.exe"; Parameters: """-var gamepath {app}\\"" ""-var gamever 0"" ""-var language ""POL"""" ""-silent"""; Components: union\primary_patch; Tasks: game_version\g1;

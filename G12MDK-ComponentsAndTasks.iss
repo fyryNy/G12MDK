@@ -1,5 +1,5 @@
 [Components]
-Name: "vcredist"; Description: "Microsoft Visual C++ Redistributable 2010 (x86)"; Types: g12mdk; Flags: fixed;
+Name: "vcredist"; Description: "Microsoft Visual C++ Redistributable AIO x86/x64"; Types: g12mdk; Flags: fixed;
 Name: "union"; Description: "Union"; Types: g12mdk; Flags: fixed;
 Name: "union\primary_patch"; Description: "Union Primary Universal (05.02.2022)"; Types: g12mdk; Flags: fixed;
 Name: "union\Union_1_0m"; Description: "Union 1.0m (27.06.2022)"; Types: g12mdk; Flags: fixed;

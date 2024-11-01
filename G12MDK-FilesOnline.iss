@@ -3,8 +3,9 @@
 ; https://7-zip.org/download.html
 Source: "Files\Utilities\7za.exe"; DestDir: "{tmp}\"; Flags: deleteafterinstall;
 
-; Download vcredist 2010 (x86) installer to temp
-Source: "{tmp}\vcredist_x86.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: vcredist; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Files/vcredist_x86.exe'), ExpandConstant('vcredist_x86.exe'));
+; Download Microsoft Visual C++ Redistributable AIO x86/x64
+; https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe
+Source: "{tmp}\VisualCppRedist_AIO_x86_x64.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: vcredist; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe'), ExpandConstant('VisualCppRedist_AIO_x86_x64.exe'));
 
 ; Download Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to temp
 Source: "{tmp}\Union_Primary_Universal.exe"; DestDir: "{tmp}\"; Attribs: hidden;  Flags: external deleteafterinstall; Components: union\primary_patch; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Files/Union_Primary_Universal.exe'), ExpandConstant('Union_Primary_Universal.exe'));
