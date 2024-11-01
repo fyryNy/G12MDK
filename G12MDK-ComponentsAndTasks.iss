@@ -17,6 +17,7 @@ Name: "assets\selected"; Description: "Selected"; Flags: exclusive;
 Name: "assets\selected\anims"; Description: "Animations"; Flags: dontinheritcheck;
 Name: "assets\selected\meshes"; Description: "Meshes"; Flags: dontinheritcheck;
 Name: "assets\selected\sounds"; Description: "Sounds"; Flags: dontinheritcheck;
+Name: "assets\selected\speech"; Description: "Speech"; Flags: dontinheritcheck;
 Name: "assets\selected\textures"; Description: "Textures"; Flags: dontinheritcheck;
 Name: "assets\selected\worlds"; Description: "Worlds"; Flags: dontinheritcheck;
 

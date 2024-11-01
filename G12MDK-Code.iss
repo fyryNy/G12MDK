@@ -32,9 +32,3 @@ begin
     DownloadPage.Hide;
   end;
 end;
-
-[Code]
-procedure DisableVDF(FilePath : string);
-begin
-  RenameFile(FilePath, FilePath + '.disabled');
-end;

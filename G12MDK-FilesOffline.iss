@@ -28,16 +28,16 @@ Source: "Files\Tools\Spacer\spacer2.exe"; DestDir: "{app}\system\"; Flags: recur
 ; Copy zSpy to game dir
 Source: "Files\Tools\zSpy\zSpy.exe"; DestDir: "{app}\system\"; Flags: recursesubdirs;
 
-; Download latest version of Spacer.NET
+; Copy latest version of Spacer.NET
 ; https://github.com/postm1/SpacerNET_Union
 Source: "Files\Plugins\SpacerNET\SpacerNET_G1.zip"; DestDir: "{tmp}\"; DestName: "SpacerNET.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g1;
 Source: "Files\Plugins\SpacerNET\SpacerNET_G2NR.zip"; DestDir: "{tmp}\"; DestName: "SpacerNET.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g2notr;
 
-; Download latest version of MarvinHelper
+; Copy latest version of MarvinHelper
 ; https://drive.usercontent.google.com/download?id=1yicnQtFQJG29mxrVLA1F6ly-LJNL-UOQ&export=download&authuser=0
 Source: "Files\Plugins\MarvinHelper\Union_MarvinHelper.vdf"; DestDir: "{app}\Data\Plugins\"; Components: union\plugins\marvin_helper; Tasks: game_version\g2notr;
 
-; Download LegacyAltRenderer
+; Copy LegacyAltRenderer
 ; https://github.com/SaiyansKing/Gothic-LegacyAltRenderer
 Source: "Files\Renderers\LegacyAltRenderer\LegacyAltRenderer.zip"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: renderer\altrenderer;
 
@@ -61,3 +61,11 @@ Source: "Files\Scripts\G2NotR-IT.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip
 Source: "Files\Scripts\G2NotR-PL.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip"; Attribs: hidden; Components: scripts; Tasks: game_version\g2notr; Languages: pl; Flags: deleteafterinstall;
 Source: "Files\Scripts\G2NotR-RU.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip"; Attribs: hidden; Components: scripts; Tasks: game_version\g2notr; Languages: ru; Flags: deleteafterinstall;
 Source: "Files\Scripts\G2NotR-ES.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip"; Attribs: hidden; Components: scripts; Tasks: game_version\g2notr; Languages: es; Flags: deleteafterinstall;
+
+; Copy batch scripts for extracting vdfs to game dir
+Source: "Files\VDF_batch_scripts\extract_anims.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\anims;
+Source: "Files\VDF_batch_scripts\extract_meshes.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\meshes;
+Source: "Files\VDF_batch_scripts\extract_sounds.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\sounds;
+Source: "Files\VDF_batch_scripts\extract_speech.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\speech;
+Source: "Files\VDF_batch_scripts\extract_textures.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\textures;
+Source: "Files\VDF_batch_scripts\extract_worlds.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\worlds;
