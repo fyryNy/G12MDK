@@ -69,3 +69,7 @@ Source: "Files\VDF_batch_scripts\extract_sounds.bat"; DestDir: "{app}\"; Attribs
 Source: "Files\VDF_batch_scripts\extract_speech.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\speech;
 Source: "Files\VDF_batch_scripts\extract_textures.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\textures;
 Source: "Files\VDF_batch_scripts\extract_worlds.bat"; DestDir: "{app}\"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\worlds;
+
+; Copy original splitted world zens to tmp
+Source: "Files\Worlds\G1_Worlds.zip"; DestDir: "{tmp}\"; DestName: "Worlds.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\worlds; Tasks: game_version\g1; 
+Source: "Files\Worlds\G2NotR_Worlds.zip"; DestDir: "{tmp}\"; DestName: "Worlds.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: assets\all or assets\selected\worlds; Tasks: game_version\g2notr; 

@@ -33,5 +33,8 @@ Filename: "{app}\extract_textures.bat"; Flags: runhidden skipifdoesntexist runas
 ; Worlds
 Filename: "{app}\extract_worlds.bat"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: assets\selected\worlds or assets\all; StatusMsg: "Extracting worlds...";
 
+; Extract original splitted world zens to game dir
+Filename: "{tmp}\7za.exe"; Parameters: "x ""{tmp}\Worlds.zip"" -o""{app}\"" * -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: assets\selected\worlds or assets\all; StatusMsg: "Installing game scripts...";
+
 ; Convert all textures from .tex to .tga using GothicZTEX
 Filename: "{app}\_work\Tools\GothicZTEX\GothicZTEX.exe"; Parameters: "/C ""{app}\_work\Data\Textures\"""; Components: assets\selected\textures or assets\all; Tasks: convert_textures; Check: AnyFileExists(ExpandConstant('{app}\_work\Data\Textures\_compiled\*.TEX')); StatusMsg: "Converting textures...";
