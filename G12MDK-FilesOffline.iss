@@ -1,13 +1,13 @@
 [Files]
-; Copy 7-Zip 24.08 (2024-08-11) standalone console to temp
+; Copy 7-Zip 24.08 (2024-08-11) standalone console to tmp
 ; https://7-zip.org/download.html
 Source: "Files\Utilities\7za.exe"; DestDir: "{tmp}\"; Flags: deleteafterinstall;
 
-; Copy Microsoft Visual C++ Redistributable AIO x86/x64 to temp
+; Copy Microsoft Visual C++ Redistributable AIO x86/x64 to tmp
 ; https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe
 Source: "Files\Required\VisualCppRedist_AIO_x86_x64.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: vcredist;
 
-; Copy Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to temp
+; Copy Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to tmp
 Source: "Files\Required\Union_Primary_Universal.exe"; DestDir: "{tmp}\"; Attribs: hidden;  Flags: deleteafterinstall; Components: union\primary_patch;
 Source: "Files\Required\Union_1_0m.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: union\Union_1_0m;
 
@@ -28,20 +28,20 @@ Source: "Files\Tools\Spacer\spacer2.exe"; DestDir: "{app}\system\"; Flags: recur
 ; Copy zSpy to game dir
 Source: "Files\Tools\zSpy\zSpy.exe"; DestDir: "{app}\system\"; Flags: recursesubdirs;
 
-; Copy latest version of Spacer.NET
+; Copy latest version of Spacer.NET to tmp
 ; https://github.com/postm1/SpacerNET_Union
 Source: "Files\Plugins\SpacerNET\SpacerNET_G1.zip"; DestDir: "{tmp}\"; DestName: "SpacerNET.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g1;
 Source: "Files\Plugins\SpacerNET\SpacerNET_G2NR.zip"; DestDir: "{tmp}\"; DestName: "SpacerNET.zip"; Attribs: hidden; Flags: deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g2notr;
 
-; Copy latest version of MarvinHelper
+; Copy latest version of MarvinHelper to game dir
 ; https://drive.usercontent.google.com/download?id=1yicnQtFQJG29mxrVLA1F6ly-LJNL-UOQ&export=download&authuser=0
 Source: "Files\Plugins\MarvinHelper\Union_MarvinHelper.vdf"; DestDir: "{app}\Data\Plugins\"; Components: union\plugins\marvin_helper; Tasks: game_version\g2notr;
 
-; Copy LegacyAltRenderer
+; Copy LegacyAltRenderer to tmp
 ; https://github.com/SaiyansKing/Gothic-LegacyAltRenderer
 Source: "Files\Renderers\LegacyAltRenderer\LegacyAltRenderer.zip"; DestDir: "{tmp}\"; Attribs: hidden; Flags: deleteafterinstall; Components: renderer\altrenderer;
 
-; Copy zipped game script to game dir
+; Copy zipped game script to tmp
 ; All scripts from https://github.com/VaanaCZ/
 ; G1 scripts
 Source: "Files\Scripts\G1-EN.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip"; Attribs: hidden; Components: scripts; Tasks: game_version\g1; Languages: en; Flags: deleteafterinstall;

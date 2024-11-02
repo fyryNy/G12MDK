@@ -1,5 +1,5 @@
 [Files]
-; Copy 7-Zip 24.08 (2024-08-11) standalone console to temp
+; Copy 7-Zip 24.08 (2024-08-11) standalone console to tmp
 ; https://7-zip.org/download.html
 Source: "Files\Utilities\7za.exe"; DestDir: "{tmp}\"; Flags: deleteafterinstall;
 
@@ -7,7 +7,7 @@ Source: "Files\Utilities\7za.exe"; DestDir: "{tmp}\"; Flags: deleteafterinstall;
 ; https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe
 Source: "{tmp}\VisualCppRedist_AIO_x86_x64.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: vcredist; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe'), ExpandConstant('VisualCppRedist_AIO_x86_x64.exe'));
 
-; Download Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to temp
+; Download Union Primary Universal (playerkit + patched game executables) and Union 1.0m installers to tmp
 Source: "{tmp}\Union_Primary_Universal.exe"; DestDir: "{tmp}\"; Attribs: hidden;  Flags: external deleteafterinstall; Components: union\primary_patch; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Files/Union_Primary_Universal.exe'), ExpandConstant('Union_Primary_Universal.exe'));
 Source: "{tmp}\Union_1_0m.exe"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: union\Union_1_0m; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Files/Union_1_0m.exe'), ExpandConstant('Union_1_0m.exe'));
 
@@ -28,20 +28,20 @@ Source: "{tmp}\spacer2.exe"; DestDir: "{app}\system\"; Flags: external recursesu
 ; Download zSpy to game dir
 Source: "{tmp}\zSpy.exe"; DestDir: "{app}\system\"; Flags: external recursesubdirs; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Files/zSpy.exe'), ExpandConstant('zSpy.exe'));
 
-; Download latest version of Spacer.NET
+; Download latest version of Spacer.NET to tmp
 ; https://github.com/postm1/SpacerNET_Union
 Source: "{tmp}\SpacerNET.zip"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g1; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/postm1/SpacerNET_Union/releases/latest/download/SpacerNET_G1.zip'), ExpandConstant('SpacerNET.zip'));
 Source: "{tmp}\SpacerNET.zip"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: union\plugins\spacer_net; Tasks: game_version\g2notr; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/postm1/SpacerNET_Union/releases/latest/download/SpacerNET_G2NR.zip'), ExpandConstant('SpacerNET.zip'));
 
-; Download latest version of MarvinHelper
+; Download latest version of MarvinHelper to game dir
 ; https://drive.usercontent.google.com/download?id=1yicnQtFQJG29mxrVLA1F6ly-LJNL-UOQ&export=download&authuser=0
 Source: "{tmp}\Union_MarvinHelper.vdf"; DestDir: "{app}\Data\Plugins\"; Flags: external; Components: union\plugins\marvin_helper; Tasks: game_version\g2notr; BeforeInstall: DownloadFile(ExpandConstant('https://drive.usercontent.google.com/download?id=1yicnQtFQJG29mxrVLA1F6ly-LJNL-UOQ&export=download&authuser=0'), ExpandConstant('Union_MarvinHelper.vdf'));
 
-; Download LegacyAltRenderer
+; Download LegacyAltRenderer to tmp
 ; https://github.com/SaiyansKing/Gothic-LegacyAltRenderer
 Source: "{tmp}\LegacyAltRenderer.zip"; DestDir: "{tmp}\"; Attribs: hidden; Flags: external deleteafterinstall; Components: renderer\altrenderer; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/SaiyansKing/Gothic-LegacyAltRenderer/releases/latest/download/LegacyAltRenderer.zip'), ExpandConstant('LegacyAltRenderer.zip'));
 
-; Download zipped game script to game dir
+; Download zipped game script to tmp
 ; All scripts from https://github.com/VaanaCZ/
 ; G1 scripts
 Source: "{tmp}\G1-EN.zip"; DestDir: "{tmp}\"; DestName: "scripts.zip"; Attribs: hidden; Components: scripts; Tasks: game_version\g1; Languages: en; Flags: external deleteafterinstall; BeforeInstall: DownloadFile(ExpandConstant('https://github.com/fyryNy/G12MDK/releases/download/Scripts/G1-EN.zip'), ExpandConstant('G1-EN.zip'));
