@@ -2,7 +2,7 @@
 AppName=Gothic 1/2 Mod Development Kit - {#AppType} installer
 AppPublisher=fyryNy
 AppPublisherURL=https://github.com/fyryNy/
-AppVersion=v1.0.2
+AppVersion=v1.0.3
 OutputDir=.
 OutputBaseFilename=G12MDK-{#AppType}
 DefaultDirName={sd}\GMDK
