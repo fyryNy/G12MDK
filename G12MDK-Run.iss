@@ -11,7 +11,7 @@ Filename: "{tmp}\Union_1_0m.exe"; Parameters: """-var gamepath {app}\\"" ""-var 
 ; Extract Spacer.NET
 Filename: "{tmp}\7za.exe"; Parameters: "e ""{tmp}\SpacerNET.zip"" -o""{app}\Data\ModVDF\"" *.mod -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: union\plugins\spacer_net; StatusMsg: "Installing SpacerNET...";
 Filename: "{tmp}\7za.exe"; Parameters: "e ""{tmp}\SpacerNET.zip"" -o""{app}\System\"" *.ico -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: union\plugins\spacer_net; StatusMsg: "Installing SpacerNET...";
-Filename: "{tmp}\7za.exe"; Parameters: "e ""{tmp}\SpacerNET.zip"" -o""{app}\System\"" *.ini -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: union\plugins\spacer_net; StatusMsg: "Installing SpacerNET...";
+Filename: "{tmp}\7za.exe"; Parameters: "e ""{tmp}\SpacerNET.zip"" -o""{app}\System\"" *.ini -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: union\plugins\spacer_net; StatusMsg: "Installing SpacerNET..."; AfterInstall: UpdateSpacerNETIni;
 
 ; Extract renderer
 Filename: "{tmp}\7za.exe"; Parameters: "x ""{tmp}\LegacyAltRenderer.zip"" -o""{app}\"" * -r -aoa"; Flags: runhidden skipifdoesntexist runascurrentuser; Components: renderer\altrenderer; StatusMsg: "Installing LegacyAltRenderer...";

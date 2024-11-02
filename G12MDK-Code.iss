@@ -32,3 +32,22 @@ begin
     DownloadPage.Hide;
   end;
 end;
+
+procedure UpdateSpacerNETIni;
+var
+  IniFile : String;
+  IniSection : String;
+  IniKey : String;
+  CurValue : String;
+begin
+  IniFile := '{app}\system\spacer_net.ini';
+  IniSection := 'OVERRIDES_SP';
+  IniKey := 'PLUGINS.IgnoreList';
+  if IniKeyExists(IniSection, IniKey, ExpandConstant(IniFile)) then begin
+    CurValue := GetIniString(IniSection, IniKey, '', ExpandConstant(IniFile));
+    SetIniString(IniSection, IniKey, 'Union_MarvinHelper, ' + CurValue, ExpandConstant(IniFile));
+  end else
+  begin
+    SetIniString(IniSection, IniKey, 'Union_MarvinHelper', ExpandConstant(IniFile));
+  end;
+end;
