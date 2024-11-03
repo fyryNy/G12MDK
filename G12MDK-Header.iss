@@ -15,6 +15,7 @@ SetupIconFile=icon.ico
 WizardSmallImageFile=icon.bmp
 WizardImageAlphaFormat=premultiplied
 UsePreviousAppDir=no
+DisableReadyPage=yes
 
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"

@@ -51,3 +51,9 @@ begin
     SetIniString(IniSection, IniKey, 'Union_MarvinHelper', ExpandConstant(IniFile));
   end;
 end;
+
+procedure CurPageChanged(CurPageID: Integer);
+begin
+  if CurPageID in [wpSelectTasks, wpReady] then
+    WizardForm.NextButton.Caption := SetupMessage(msgButtonInstall)
+end;
