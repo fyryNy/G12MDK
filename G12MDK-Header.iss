@@ -16,6 +16,7 @@ WizardSmallImageFile=icon.bmp
 WizardImageAlphaFormat=premultiplied
 UsePreviousAppDir=no
 DisableReadyPage=yes
+WizardSizePercent=150
 
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"
