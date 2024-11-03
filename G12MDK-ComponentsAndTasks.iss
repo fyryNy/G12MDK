@@ -4,13 +4,19 @@ Name: "union"; Description: "Union"; Types: g12mdk; Flags: fixed;
 Name: "union\primary_patch"; Description: "Union Primary Universal (05.02.2022)"; Types: g12mdk; Flags: fixed;
 Name: "union\Union_1_0m"; Description: "Union 1.0m (27.06.2022)"; Types: g12mdk; Flags: fixed;
 Name: "union\plugins"; Description: "Union plugins"; Types: g12mdk; Flags: fixed;
-Name: "union\plugins\spacer_net"; Description: "Spacer.NET - Better alternative for Spacer"; Types: g12mdk; Flags: fixed;
+Name: "union\plugins\spacer_net"; Description: "Spacer.NET - Tool for world editing, better alternative for normal Spacer"; Types: g12mdk; Flags: fixed;
 Name: "union\plugins\marvin_helper"; Description: "MarvinHelper - Adds new console command for better debugging"; Types: g12mdk; Flags: fixed;
+Name: "gothic_vdfs"; Description: "GothicVDFS - Tool for viewing/building/extracting .vdf packages"; Types: g12mdk; Flags: fixed;
+Name: "gothic_ztex"; Description: "GothicZTEX - Tool for converting game textures from compiled .tex format to .tga"; Types: g12mdk; Flags: fixed;
+Name: "zspy"; Description: "zSpy - Tool necessary for debugging"; Types: g12mdk; Flags: fixed;
+
 Name: "renderer"; Description: "Alternative renderer";
 Name: "renderer\altrenderer"; Description: "LegacyAltRenderer"; Flags: exclusive;
 //Name: "renderer\dx11_saiyansking"; Description: "GD3D11 - SaiyansKing's fork"; Flags: exclusive;
 //Name: "renderer\dx11_shoun"; Description: "GD3D11 - Shoun's fork"; Flags: exclusive;
-Name: "scripts"; Description: "Scripts";
+
+Name: "scripts"; Description: "Scripts - {language}";
+
 Name: "assets"; Description: "Extract game assets";
 Name: "assets\all"; Description: "All"; Flags: exclusive;
 Name: "assets\selected"; Description: "Selected"; Flags: exclusive;
