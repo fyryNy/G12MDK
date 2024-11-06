@@ -1,14 +1,14 @@
 [Components]
 Name: "vcredist"; Description: "Microsoft Visual C++ Redistributable AIO x86/x64"; Types: g12mdk; Flags: fixed;
 Name: "union"; Description: "Union"; Types: g12mdk; Flags: fixed;
-Name: "union\primary_patch"; Description: "Union Primary Universal (05.02.2022)"; Types: g12mdk; Flags: fixed;
-Name: "union\Union_1_0m"; Description: "Union 1.0m (27.06.2022)"; Types: g12mdk; Flags: fixed;
+Name: "union\primary_patch"; Description: "Union Primary Universal: PlayerKit (patched game executable and GothicStarter)"; Types: g12mdk; Flags: fixed;
+Name: "union\Union_1_0m"; Description: "Union 1.0m: game fixes, successor to SystemPack"; Types: g12mdk; Flags: fixed;
 Name: "union\plugins"; Description: "Union plugins"; Types: g12mdk; Flags: fixed;
-Name: "union\plugins\spacer_net"; Description: "Spacer.NET - Tool for world editing, better alternative for normal Spacer"; Types: g12mdk; Flags: fixed;
-Name: "union\plugins\marvin_helper"; Description: "MarvinHelper - Adds new console command for better debugging"; Types: g12mdk; Flags: fixed;
-Name: "gothic_vdfs"; Description: "GothicVDFS - Tool for viewing/building/extracting .vdf packages"; Types: g12mdk; Flags: fixed;
-Name: "gothic_ztex"; Description: "GothicZTEX - Tool for converting game textures from compiled .tex format to .tga"; Types: g12mdk; Flags: fixed;
-Name: "zspy"; Description: "zSpy - Tool necessary for debugging"; Types: g12mdk; Flags: fixed;
+Name: "union\plugins\spacer_net"; Description: "Spacer.NET: Tool for world editing, better alternative to normal Spacer"; Types: g12mdk; Flags: fixed;
+Name: "union\plugins\marvin_helper"; Description: "MarvinHelper: Adds new console commands and features that can help with debugging"; Types: g12mdk; Flags: fixed;
+Name: "gothic_vdfs"; Description: "GothicVDFS: Tool for viewing/building/extracting .vdf/.mod packages"; Types: g12mdk; Flags: fixed;
+Name: "gothic_ztex"; Description: "GothicZTEX: Tool for converting game textures from compiled .tex format to .tga"; Types: g12mdk; Flags: fixed;
+Name: "zspy"; Description: "zSpy: Tool necessary for debugging"; Types: g12mdk; Flags: fixed;
 
 Name: "renderer"; Description: "Alternative renderer";
 Name: "renderer\altrenderer"; Description: "LegacyAltRenderer"; Flags: exclusive;
